@@ -1,0 +1,106 @@
+/* common css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 1080px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: arial;
+    background-color: #fcf5eb;
+}
+.button{
+    background-color: #25d366;
+    color: #1c1e21;
+    padding: 16px 28px;
+    font-size: 16px;
+    border: 1px solid #1c1e21;
+    border-radius: 40px;
+    overflow: hidden;
+    z-index: 1;
+}
+.button::before{
+    background-color: #111 !important;
+    width: 100% !important;
+    height: 80px !important;
+    border-radius: 50%;
+    top: 100%;
+    bottom: auto;
+    z-index: -1;
+    transition: 0.5s !important;
+}
+.button:hover{
+    color: white;
+}
+.button:hover::before{
+    top: 0;
+    transform: scale(1.5);
+}
+
+/* common css ends */
+nav{
+    padding: 30px 50px 100px 50px;
+}
+nav .logo,
+nav .menu,
+nav .download_button{
+    width: 33.33%;
+}
+
+nav .logo img{
+    width: 130px;
+}
+
+nav .menu ul li,
+nav .download_button ul li{
+    display: inline-block;
+}
+
+div .download_button ul li a,
+nav .menu ul li a{
+    color: #1c1e21;
+    font-size: 18px;
+    line-height: 25px;
+    margin: 0px 10px;
+    position: relative;
+    display: block;
+}
+div .download_button ul li a::before,
+nav .menu ul li a::before{
+    content: "";
+    width: 0px;
+    height: 2px;
+    background-color: #25d366;
+    position: absolute;
+    bottom: -4px;
+    left: 0px;
+    transition: 0.3s;
+}
+div .download_button ul li:hover a::before,
+nav .menu ul li:hover a::before{
+    width: 100%;
+}
+
+div .download_button ul{
+    text-align: right;
+}
+
+nav .download_button ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
